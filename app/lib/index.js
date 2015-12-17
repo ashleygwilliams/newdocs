@@ -1,8 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-var build_path = function() {
-  return path.join(__dirname, '..', 'data');
+var build_path = function(opts) {
+  var version = opts.version;
+
+  return path.join(__dirname, '..', 'data', version);
 };
 
 var get_guides = function(opts) {

@@ -2,9 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 var build_path = function(opts) {
+  var version = opts.version;
   var guide = opts.guide;
   
-  return path.join(__dirname, '..', 'data', guide);
+  return path.join(__dirname, '..', 'data', version, guide);
 };
 
 var get_pages = function(opts) {

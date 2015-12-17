@@ -3,10 +3,11 @@ const path = require('path');
 const markdown = require('markdown').markdown;
 
 var build_path = function(opts) {
+  var version = opts.version;
   var page = opts.page;
   var guide = opts.guide;
 
-  return path.join(__dirname, '..', 'data', guide, page + '.md');
+  return path.join(__dirname, '..', 'data', version, guide, page + '.md');
 };
 
 var load = function(opts) {
