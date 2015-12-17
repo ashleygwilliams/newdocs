@@ -2,6 +2,7 @@ const markdown = require('markdown').markdown;
 
 const page = require('./lib/page');
 const guide = require('./lib/guide');
+const index = require('./lib/index');
 
 const express = require('express');
 const app = express();
@@ -37,7 +38,12 @@ app.get('/:guide', function(req, res){
 });
 
 app.get('/', function(req, res){
-  res.send('hello new docs');
+  try {
+    var data = index.get_guides();
+  } catch(e) {
+    console.log(e);
+  }
+  res.render('index', { data: data });
 });
 
 module.exports = app;

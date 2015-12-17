@@ -1,0 +1,9 @@
+extends ./layout
+
+block content
+  h1 these are the docs you are looking for
+  h2 guides
+  ul
+    for guide in data
+      li
+        a(href=guide)!= guide
