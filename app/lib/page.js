@@ -4,9 +4,9 @@ const markdown = require('markdown').markdown;
 
 var build_path = function(opts) {
   var page = opts.page;
-  var section = opts.section;
+  var guide = opts.guide;
 
-  return path.join(__dirname, '..', 'data', section, page + '.md');
+  return path.join(__dirname, '..', 'data', guide, page + '.md');
 };
 
 var load = function(opts) {

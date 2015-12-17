@@ -11,10 +11,10 @@ app.use(express.static('public'));
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 
-app.get('/:section/:page', function(req, res){
+app.get('/:guide/:page', function(req, res){
   try {
     var page_info = {
-      section: req.params.section,
+      guide: req.params.guide,
       page: req.params.page
     };
     var data = page.load(page_info);
