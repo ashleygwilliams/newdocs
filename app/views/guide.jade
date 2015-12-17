@@ -1,0 +1,8 @@
+extends ./layout
+
+block content
+  h1!= name
+  ul
+    for page in data
+      li
+        a(href=name + "/" + page.slice(0, -3))!= page.slice(0, -3)
