@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js"
+    "dev": "npm run fetch:cli && node server.js",
+    "fetch:cli": "./bin/fetch-cli.sh"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,11 @@
   },
   "homepage": "https://github.com/ashleygwilliams/newdocs",
   "devDependencies": {
+    "@npm/policies": "git://github.com/npm/policies",
     "express": "^4.13.3",
     "jade": "^1.11.0",
-    "markdown": "^0.5.0"
+    "mansplain": "^3.0.1",
+    "markdown": "^0.5.0",
+    "npm": "^3.5.2"
   }
 }

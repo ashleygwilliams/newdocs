@@ -23,7 +23,7 @@ app.get('/:version/:guide/:page', function(req, res){
   } catch(e) {
     console.log(e);
   }
-  res.render('page', { data: data });
+  res.render('page', { page_info: page_info, data: data });
 });
 
 app.get('/:version/:guide', function(req, res){
@@ -36,7 +36,7 @@ app.get('/:version/:guide', function(req, res){
   } catch(e) {
     console.log(e);
   }
-  res.render('guide', { name: req.params.guide, data: data });
+  res.render('guide', { guide_info: guide_info, data: data });
 });
 
 app.get('/:version', function(req, res){
@@ -48,7 +48,7 @@ app.get('/:version', function(req, res){
   } catch(e) {
     console.log(e);
   }
-  res.render('index', { data: data });
+  res.render('index', { version_info: version_info, data: data });
 });
 
 app.get('/', function(req, res) {

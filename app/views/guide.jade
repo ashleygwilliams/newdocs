@@ -1,8 +1,8 @@
 extends ./layout
 
 block content
-  h1!= name
+  h1!= guide_info.guide
   ul
     for page in data
       li
-        a(href=name + "/" + page.slice(0, -3))!= page.slice(0, -3)
+        a(href="/" + guide_info.version + "/" +  guide_info.guide + "/" + page.slice(0, -3))!= page.slice(0, -3)

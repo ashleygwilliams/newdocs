@@ -1,2 +1,6 @@
 node_modules
 *log
+app/data/3.0.0/cli
+app/data/3.0.0/misc
+app/data/3.0.0/files
+app/data/3.0.0/policies
