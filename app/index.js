@@ -21,7 +21,7 @@ app.get('/:version/:guide/:page', function(req, res){
     };
     var data = page.load(page_info);
   } catch(e) {
-    console.log(e);
+    res.render('404');
   }
   res.render('page', { page_info: page_info, data: data });
 });
@@ -34,7 +34,7 @@ app.get('/:version/:guide', function(req, res){
     };
     var data = guide.get_pages(guide_info);
   } catch(e) {
-    console.log(e);
+    res.render('404');
   }
   res.render('guide', { guide_info: guide_info, data: data });
 });
@@ -46,7 +46,7 @@ app.get('/:version', function(req, res){
     };
     var data = index.get_guides(version_info);
   } catch(e) {
-    console.log(e);
+    res.render('404');
   }
   res.render('index', { version_info: version_info, data: data });
 });
