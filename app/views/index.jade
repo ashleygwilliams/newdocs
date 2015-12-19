@@ -1,9 +1,13 @@
 extends ./layout
 
 block content
-  h1 these are the docs you are looking for
-  h2 guides
-  ul
-    for guide in data
-      li
-        a(href=version_info.version + "/" + guide)!= guide
+  div.centered
+    h1#jumbo these are the docs you are looking for
+  div
+    include ./partials/calls-to-action/opensource
+  div
+    h2.centered.ruled guides
+    ul.links.columnar
+      for guide in data
+        li
+          a(href=version_info.version + "/" + guide)!= guide

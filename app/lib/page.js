@@ -15,7 +15,9 @@ var load = function(opts) {
   var path = build_path(opts);
   var doc = fs.readFileSync(path, 'utf-8');
   var md = markdown.toHTML(doc);
-  var prefix_hash = { 1: 'cli', 5: 'files', 7: 'misc'};
+  var prefix_hash = {  1: opts.version + '/cli',
+                       5: opts.version + '/files',
+                       7: opts.version + '/misc'};
   return mansplain({ input: md, prefix: prefix_hash });
 };
 

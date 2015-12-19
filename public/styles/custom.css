@@ -1,0 +1,32 @@
+#jumbo {
+  margin: 20px 0;
+}
+
+#calls-to-action {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#calls-to-action li {
+  border: 2px solid rgba(0,0,0,0.08);
+  padding: 10px 20px;
+  margin: 0;
+  display: inline-block;
+  list-decoration-type: none;
+  width: 20%;
+  height: 250px;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+#calls-to-action li:hover {
+  border: solid 1px red;
+}
+
+#calls-to-action img {
+  width: 100%;
+}
+
+#calls-to-action .img {
+  height: 150px;
+}

@@ -2,7 +2,7 @@ extends ./layout
 
 block content
   h1!= guide_info.guide
-  ul
+  ul.links.columnar
     for page in data
       li
         a(href="/" + guide_info.version + "/" +  guide_info.guide + "/" + page.slice(0, -3))!= page.slice(0, -3)
